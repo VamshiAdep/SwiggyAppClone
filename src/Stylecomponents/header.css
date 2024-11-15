@@ -1,0 +1,70 @@
+/* Header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-items {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-items > ul > li:hover {
+  color: #778995;
+}
+/* LoginButton.css */
+
+.loginButton {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loginButton:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.noLinkStyle {
+  text-decoration: none;
+  cursor: pointer;
+  color: #2980b9;
+
+}
+.noLinkStyle :hover {
+  color: #3498db;
+}

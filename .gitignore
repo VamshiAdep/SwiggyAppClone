@@ -21,3 +21,28 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+  <div className="menuBook">
+        <div className="menuTitle">
+          <h2>{menuTitle || "No Menu Title Available"}</h2>
+          <div className="menuList">
+            <ul>
+              {menuList && menuList.length > 0 ? (
+                menuList.map((item, index) => (
+                  <li key={item?.card?.info?.id}>
+                    <strong>
+                      {item?.card?.info?.name || "No Item Name Available"} :-{" "}
+                      {"Rs-"}{" "}
+                      {item?.card?.info?.price / 100 ||
+                        item?.card?.info?.defaultPrice / 100}
+                    </strong>
+                  </li>
+                ))
+              ) : (
+                <li>No Menu Items Available</li>
+              )}
+            </ul>
+          </div>
+        </div>
+      </div>

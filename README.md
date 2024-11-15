@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+  useEffect(() => {
+    fetchData();
+  }, [resId]);
+
+const [menuUpdate,setMenuUpdate]=useState()
+  const fetchData = async () => {
+    try {
+      const response = await fetch(MENU_API + resId);
+      if (!response.ok) throw new Error("Network response was not ok");
+      const json = await response.json();
+      console.log(json);
+
+      setMenuUpdate(json?.data);
+    } catch (error) {
+      console.error("Fetching error:", error);
+    }
+  };

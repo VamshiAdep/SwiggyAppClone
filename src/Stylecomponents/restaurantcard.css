@@ -1,0 +1,127 @@
+/* RestaurantCard.css */
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.res-card {
+  position: relative;
+  width: 250px;
+  padding: 20px;
+  height: 450px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+.res-card:hover {
+  border: 1px solid silver;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.res-logo {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  position: relative;
+}
+
+
+
+.res-card h3 {
+  margin-top: 8px;
+  color: #333;
+  font-size: 18px;
+}
+
+.res-card h4 {
+  margin-top: 4px;
+  color: #777;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .res-card {
+    width: calc(50% - 20px); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .res-card {
+    width: 100%; /* Single card per row on extra small screens */
+  }
+}
+
+/* FilterButton.css */
+
+.containerUpdate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar {
+  padding: 10px 20px;
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #3498db; 
+  color: white; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.filter-btn:hover {
+  background-color: #2980b9; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.filter-btn:active {
+  background-color: #1f6397; 
+  transform: translateY(0); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.promoted-card {
+  position: relative;
+}
+
+.promoted-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  z-index: 2;
+}
